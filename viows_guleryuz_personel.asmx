@@ -1,0 +1,1 @@
+﻿<%@ WebService Language="C#" CodeBehind="viows_guleryuz_personel.asmx.cs" Class="CVioWebServis.modul.VioWS_Guleryuz_Personel" %>

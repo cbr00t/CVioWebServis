@@ -1,0 +1,1 @@
+﻿<%@ WebService Language="C#" CodeBehind="viows.asmx.cs" Class="CVioWebServis.VioWS" %>

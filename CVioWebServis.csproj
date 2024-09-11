@@ -1,0 +1,521 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\ozer\CSkyWSApp\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\..\ozer\CSkyWSApp\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B5EAC511-FF99-481E-BDE5-B6D823F73ABF}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CVioWebServis</RootNamespace>
+    <AssemblyName>CVioWebServis</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44354</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>1</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\..\ozer\CSkyWSApp\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="viows.asmx" />
+    <Content Include="viows_guleryuz_personel.asmx" />
+    <Content Include="viows_guleryuz_ticari.asmx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\enums\ortak\CHttpMethod.cs" />
+    <Compile Include="src\enums\ortak\CIOType.cs" />
+    <Compile Include="src\enums\ticari\GonderimFisTipi.cs" />
+    <Compile Include="src\enums\ticari\TicariBelgeAlmSat.cs" />
+    <Compile Include="src\enums\ticari\TicariBelgeDetayTipi.cs" />
+    <Compile Include="src\enums\ticari\TicariBelgePIFTipi.cs" />
+    <Compile Include="src\etc\filtre\struct\Filtre.cs" />
+    <Compile Include="src\etc\filtre\struct\FiltreBasiSonu.cs" />
+    <Compile Include="src\etc\filtre\struct\FiltreListe.cs" />
+    <Compile Include="src\etc\filtre\struct\FiltreOzellik.cs" />
+    <Compile Include="src\etc\utils\CGlobals.cs" />
+    <Compile Include="src\ext\CWSExtension.cs" />
+    <Compile Include="src\lib\coll\CDict.cs" />
+    <Compile Include="src\lib\coll\CKV.cs" />
+    <Compile Include="src\lib\coll\CList.cs" />
+    <Compile Include="src\lib\coll\COrdDict.cs" />
+    <Compile Include="src\lib\coll\CXmlDict.cs" />
+    <Compile Include="src\rrm\baseTemplates\base\request\CRRMBasicMasterRequest.cs" />
+    <Compile Include="src\rrm\baseTemplates\base\request\CRRMBinaryRequest.cs" />
+    <Compile Include="src\rrm\baseTemplates\base\request\CRRMMasterListRequest.cs" />
+    <Compile Include="src\rrm\baseTemplates\base\request\CRRMMasterRequest.cs" />
+    <Compile Include="src\rrm\baseTemplates\base\request\CRRMMasterRequestNonFilterable.cs" />
+    <Compile Include="src\rrm\baseTemplates\base\request\CRRMSimpleRequest.cs" />
+    <Compile Include="src\rrm\baseTemplates\base\request\CRRMXmlRequest.cs" />
+    <Compile Include="src\rrm\baseTemplates\base\response\CRRMBasicXmlResponse.cs" />
+    <Compile Include="src\rrm\baseTemplates\base\response\CRRMBinaryResponse.cs" />
+    <Compile Include="src\rrm\baseTemplates\base\response\CRRMErrorResponse.cs" />
+    <Compile Include="src\rrm\baseTemplates\base\response\CRRMListResponse.cs" />
+    <Compile Include="src\rrm\baseTemplates\base\response\CRRMSingleResponse.cs" />
+    <Compile Include="src\rrm\baseTemplates\normal\request\binaryRequest\CRRMDownloadRequest.cs" />
+    <Compile Include="src\rrm\baseTemplates\normal\response\binaryResponse\CRRMDownloadResponse.cs" />
+    <Compile Include="src\rrm\baseTemplates\normal\response\singleResponse\CRRMBoolResponse.cs" />
+    <Compile Include="src\rrm\baseTemplates\normal\response\singleResponse\CRRMIntegerResponse.cs" />
+    <Compile Include="src\rrm\baseTemplates\normal\response\singleResponse\CRRMStringListResponse.cs" />
+    <Compile Include="src\rrm\baseTemplates\normal\response\singleResponse\CRRMStringResponse.cs" />
+    <Compile Include="src\rrm\baseTemplates\normal\response\xmlResponse\CRRMMasterResponse.cs" />
+    <Compile Include="src\rrm\baseTemplates\normal\response\xmlResponse\CRRMSingleMasterResponse.cs" />
+    <Compile Include="src\rrm\baseTemplates\normal\response\xmlResponse\CRRMSingleMasterResponseContainer.cs" />
+    <Compile Include="src\rrm\baseTemplates\normal\response\xmlResponse\CRRMXmlResponse.cs" />
+    <Compile Include="src\rrm\base\CRRMParseable.cs" />
+    <Compile Include="src\rrm\base\CRRMRequest.cs" />
+    <Compile Include="src\rrm\base\CRRMResponse.cs" />
+    <Compile Include="src\rrm\base\CRRMResponseBase.cs" />
+    <Compile Include="src\rrm\enums\CRRM_Cinsiyet.cs" />
+    <Compile Include="src\rrm\enums\CRRM_FRReportOutput.cs" />
+    <Compile Include="src\rrm\enums\CRRM_KayitDegistiTuru.cs" />
+    <Compile Include="src\rrm\enums\CRRM_MedeniDurum.cs" />
+    <Compile Include="src\rrm\enums\CRRM_SSKDurum.cs" />
+    <Compile Include="src\rrm\etc\CRRMCallArgs.cs" />
+    <Compile Include="src\rrm\etc\CRRMDelegates.cs" />
+    <Compile Include="src\rrm\etc\CRRMErrorCategory.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\enums\CRRM_GYPerFazlaMesaiTipi.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\enums\CRRM_GYPerGunTipi.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\enums\CRRM_GYPerIzinNeden.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\enums\CRRM_GYPerNetBrut.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\enums\CRRM_GYPerOgrenimDurumu.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\enums\CRRM_GYPerSozlesmeDurumu.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\enums\CRRM_GYPerTarFirmaMaliyetVer_AltTip.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\enums\CRRM_GYPerTarNetBrut.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\enums\CRRM_GYPerUcretTipi.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\enums\CRRM_GYPerYanOdemeAnaTip.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\request\CRRM_GYPerBolgeOlusturRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\request\CRRM_GYPerBolgeSilRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\request\CRRM_GYPerCalismaAlaniOlusturRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\request\CRRM_GYPerCalismaAlaniSilRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\request\CRRM_GYPerEksikGunNedenleriVerRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\request\CRRM_GYPerFirmaCalismaAlaniOlusturRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\request\CRRM_GYPerFirmaCalismaAlaniSilRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\request\CRRM_GYPerFirmaOlusturRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\request\CRRM_GYPerFirmaSilRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\request\CRRM_GYPerGorevleriVerRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\request\CRRM_GYPerGruplariVerRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\request\CRRM_GYPerGrupOlusturRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\request\CRRM_GYPerIseGirisPdfVerRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\request\CRRM_GYPerIseGirisYapRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\request\CRRM_GYPerIstenCikisNedenleriVerRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\request\CRRM_GYPerIstenCikisPdfVerRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\request\CRRM_GYPerIstenCikisYapRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\request\CRRM_GYPerKesintiOdemeListeRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\request\CRRM_GYPerKesintiOdemeOlusturRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\request\CRRM_GYPerMasraflariVerRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\request\CRRM_GYPerMasrafOlusturRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\request\CRRM_GYPerPersonelListeRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\request\CRRM_GYPerPersonelOlusturRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\request\CRRM_GYPerPersonelOlusturVeIseGirisYapRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\request\CRRM_GYPerPersonelOlusturVeIstenCikisYapRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\request\CRRM_GYPerPersonelRefOlusturRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\request\CRRM_GYPerPersonelSilRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\request\CRRM_GYPerSGKIsyeriOlusturRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\request\CRRM_GYPerSGKIsyerleriVerRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\request\CRRM_GYPerSGKMeslekleriVerRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\request\CRRM_GYPerSozlesmeliAvansOlusturRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\request\CRRM_GYPerSozlesmeliDonemOlusturRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\request\CRRM_GYPerSozlesmeliDonemSilRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\request\CRRM_GYPerSozlesmeliFirmaMaliyetlerVerRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\request\CRRM_GYPerSozlesmeliPersonelOlusturRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\request\CRRM_GYPerSozlesmeliPersonelOlusturVeIseGirisYapRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\request\CRRM_GYPerSozlesmeliPersonelOlusturVeIstenCikisYapRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\request\CRRM_GYPerSozlesmeliPuantajOlusturRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\request\CRRM_GYPerSozlesmeliPuantajSilRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\request\CRRM_GYPerSozlesmeliTotalPuantajOlusturRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\request\CRRM_GYPerTarCalismaOlusturRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\request\CRRM_GYPerTarCalismaSilRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\request\CRRM_GYPerTarDonemOlusturRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\request\CRRM_GYPerTarDonemSilRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\request\CRRM_GYPerTarFirmaMaliyetlerVerRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\request\CRRM_GYPerTarTahakkukYapRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\request\CRRM_GYPerUcretPusulaGonderRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\request\CRRM_GYPerYanOdemeListeRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\request\CRRM_GYPerYanOdemeOlusturRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\request\CRRM_GYPerYasalTahakkukYapRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\request\CRRM_GYPerYetkiliListeRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\request\CRRM_GYPerYetkiliOlusturRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\request\CRRM_GYPerYetkiliSilRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\response\CRRM_GYPerBolgeOlusturResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\response\CRRM_GYPerBolgeSilResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\response\CRRM_GYPerCalismaAlaniOlusturResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\response\CRRM_GYPerCalismaAlaniSilResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\response\CRRM_GYPerEksikGunNedenleriVerResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\response\CRRM_GYPerFirmaCalismaAlaniOlusturResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\response\CRRM_GYPerFirmaCalismaAlaniSilResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\response\CRRM_GYPerFirmaOlusturResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\response\CRRM_GYPerFirmaSilResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\response\CRRM_GYPerGorevleriVerResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\response\CRRM_GYPerGruplariVerResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\response\CRRM_GYPerGrupOlusturResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\response\CRRM_GYPerIseGirisPdfVerResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\response\CRRM_GYPerIseGirisYapResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\response\CRRM_GYPerIstenCikisNedenleriVerResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\response\CRRM_GYPerIstenCikisPdfVerResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\response\CRRM_GYPerIstenCikisYapResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\response\CRRM_GYPerKesintiOdemeListeResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\response\CRRM_GYPerKesintiOdemeOlusturResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\response\CRRM_GYPerMasraflariVerResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\response\CRRM_GYPerMasrafOlusturResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\response\CRRM_GYPerPersonelListeResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\response\CRRM_GYPerPersonelOlusturResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\response\CRRM_GYPerPersonelOlusturVeIseGirisYapResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\response\CRRM_GYPerPersonelOlusturVeIstenCikisYapResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\response\CRRM_GYPerPersonelRefOlusturResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\response\CRRM_GYPerPersonelSilResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\response\CRRM_GYPerSGKIsyeriOlusturResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\response\CRRM_GYPerSGKIsyerleriVerResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\response\CRRM_GYPerSGKMeslekleriVerResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\response\CRRM_GYPerSozlesmeliAvansOlusturResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\response\CRRM_GYPerSozlesmeliDonemOlusturResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\response\CRRM_GYPerSozlesmeliDonemSilResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\response\CRRM_GYPerSozlesmeliFirmaMaliyetlerVerResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\response\CRRM_GYPerSozlesmeliPersonelOlusturResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\response\CRRM_GYPerSozlesmeliPersonelOlusturVeIseGirisYapResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\response\CRRM_GYPerSozlesmeliPersonelOlusturVeIstenCikisYapResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\response\CRRM_GYPerSozlesmeliPuantajOlusturResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\response\CRRM_GYPerSozlesmeliPuantajSilResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\response\CRRM_GYPerSozlesmeliTotalPuantajOlusturResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\response\CRRM_GYPerTarCalismaOlusturResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\response\CRRM_GYPerTarCalismaSilResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\response\CRRM_GYPerTarDonemOlusturResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\response\CRRM_GYPerTarDonemSilResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\response\CRRM_GYPerTarFirmaMaliyetlerVerResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\response\CRRM_GYPerTarTahakkukYapResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\response\CRRM_GYPerUcretPusulaGonderResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\response\CRRM_GYPerYanOdemeListeResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\response\CRRM_GYPerYanOdemeOlusturResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\response\CRRM_GYPerYasalTahakkukYapResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\response\CRRM_GYPerYetkiliListeResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\response\CRRM_GYPerYetkiliOlusturResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\structs\response\CRRM_GYPerYetkiliSilResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\baseTemplates\CRRMR_GYDeleteArg.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\baseTemplates\CRRMR_GYDeleteResult.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\base\CRRMR_GYBasicArgWithID.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\base\CRRMR_GYBasicResult.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\base\CRRMR_GYBasicResultWithID.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\base\CRRMR_GYBasicResultWithKod.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerBolgeOlusturArg.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerBolgeOlusturResult.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerCalismaAlaniOlusturArg.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerCalismaAlaniOlusturResult.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerEksikGunNeden.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerFirmaCalismaAlaniOlusturArg.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerFirmaCalismaAlaniOlusturResult.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerFirmaOlusturArg.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerFirmaOlusturResult.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerGorev.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerGrup.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerGrupOlusturArg.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerGrupOlusturResult.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerIseGirisPdfVerArg.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerIseGirisPdfVerResult.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerIseGirisYapArg.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerIseGirisYapResult.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerIstenCikisNeden.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerIstenCikisPdfVerArg.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerIstenCikisPdfVerResult.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerIstenCikisYapArg.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerIstenCikisYapResult.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerKesintiOdeme.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerKesintiOdemeOlusturArg.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerKesintiOdemeOlusturResult.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerMasraf.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerMasrafOlusturArg.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerMasrafOlusturResult.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerPersonel.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerPersonelOlusturArg.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerPersonelOlusturResult.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerPersonelOlusturVeIseGirisYapArg.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerPersonelOlusturVeIseGirisYapResult.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerPersonelOlusturVeIstenCikisYapArg.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerPersonelOlusturVeIstenCikisYapResult.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerPersonelRef.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerPersonelRefOlusturArg.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerPersonelRefOlusturResult.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerSGKIsyeri.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerSGKIsyeriOlusturArg.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerSGKIsyeriOlusturResult.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerSGKMeslek.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerSozlesmeliAvansOlusturArg.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerSozlesmeliAvansOlusturResult.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerSozlesmeliDonemOlusturArg.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerSozlesmeliDonemOlusturResult.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerSozlesmeliFirmaMaliyet.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerSozlesmeliPersonelOlusturArg.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerSozlesmeliPersonelOlusturResult.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerSozlesmeliPersonelOlusturVeIseGirisYapArg.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerSozlesmeliPersonelOlusturVeIseGirisYapResult.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerSozlesmeliPersonelOlusturVeIstenCikisYapArg.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerSozlesmeliPersonelOlusturVeIstenCikisYapResult.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerSozlesmeliPuantajOlusturArg.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerSozlesmeliPuantajOlusturResult.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerSozlesmeliPuantajSilArg.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerSozlesmeliPuantajSilResult.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerSozlesmeliTotalPuantajOlusturArg.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerSozlesmeliTotalPuantajOlusturResult.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerSP_Gun.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerSP_Kesinti.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerSP_YanOdeme.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerSTP_OdemeVerileri.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerTarCalismaOlusturArg.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerTarCalismaOlusturResult.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerTarCalismaSilArg.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerTarCalismaSilResult.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerTarDonemOlusturArg.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerTarDonemOlusturResult.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerTarFirmaMaliyet.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerTarTahakkukYapArg.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerTarTahakkukYapResult.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerYanOdeme.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerYanOdemeOlusturArg.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerYanOdemeOlusturResult.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerYasalTahakkukYapArg.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerYasalTahakkukYapResult.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerYetkili.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerYetkiliOlusturArg.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\personel\tables\project\CRRMR_GYPerYetkiliOlusturResult.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\enums\CRRM_GYTicCinsiyet.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\enums\CRRM_GYTicEFAyrimTipi.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\enums\CRRM_GYTicHizmetTipi.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\structs\request\CRRM_GYTicTakipNolariVerRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\structs\request\CRRM_GYTicBolgeOlusturRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\structs\request\CRRM_GYTicDonemOlusturRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\structs\request\CRRM_GYTicEFaturalariVerRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\structs\request\CRRM_GYTicEFaturaPdfVerRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\structs\request\CRRM_GYTicFaturaVeriOlusturRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\structs\request\CRRM_GYTicFirmaIDAtaRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\structs\request\CRRM_GYTicFirmalariVerRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\structs\request\CRRM_GYTicFirmaOlusturRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\structs\request\CRRM_GYTicGorevIDAtaRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\structs\request\CRRM_GYTicBolgeleriVerRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\structs\request\CRRM_GYTicGorevleriVerRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\structs\request\CRRM_GYTicGorevOlusturRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\structs\request\CRRM_GYTicHizmetKategorileriVerRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\structs\request\CRRM_GYTicHizmetleriEslestirRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\structs\request\CRRM_GYTicHizmetleriVerRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\structs\request\CRRM_GYTicHizmetTurleriVerRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\structs\request\CRRM_GYTicKategorileriVerRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\structs\request\CRRM_GYTicSozlesmeliHakedisGonderRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\structs\response\CRRM_GYTicTakipNolariVerResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\structs\response\CRRM_GYTicBolgeOlusturResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\structs\response\CRRM_GYTicDonemOlusturResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\structs\response\CRRM_GYTicEFaturalariVerResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\structs\response\CRRM_GYTicEFaturaPdfVerResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\structs\response\CRRM_GYTicFaturaVeriOlusturResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\structs\response\CRRM_GYTicFirmaHakedisOlusturResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\structs\response\CRRM_GYTicFirmaIDAtaResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\structs\response\CRRM_GYTicFirmalariVerResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\structs\response\CRRM_GYTicFirmaOlusturResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\structs\response\CRRM_GYTicGorevIDAtaResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\structs\response\CRRM_GYTicBolgeleriVerResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\structs\response\CRRM_GYTicGorevleriVerResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\structs\response\CRRM_GYTicGorevOlusturResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\structs\response\CRRM_GYTicHizmetKategorileriVerResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\structs\response\CRRM_GYTicHizmetleriEslestirResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\structs\response\CRRM_GYTicHizmetleriVerResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\structs\response\CRRM_GYTicHizmetTurleriVerResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\structs\response\CRRM_GYTicKategorileriVerResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\tables\project\CRRMR_GYTicTakipNo.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\tables\project\CRRMR_GYTicBolgeOlusturArg.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\tables\project\CRRMR_GYTicBolgeOlusturResult.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\tables\project\CRRMR_GYTicDonemOlusturArg.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\tables\project\CRRMR_GYTicDonemOlusturResult.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\tables\project\CRRMR_GYTicEFatura.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\tables\project\CRRMR_GYTicFaturaVeriOlusturArg.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\tables\project\CRRMR_GYTicFaturaVeriOlusturResult.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\tables\project\CRRMR_GYTicFirma.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\tables\project\CRRMR_GYTicFirmaHakedisOlusturArg.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\tables\project\CRRMR_GYTicFirmaHakedisOlusturResult.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\tables\project\CRRMR_GYTicFirmaIDAtaArg.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\tables\project\CRRMR_GYTicFirmaIDAtaResult.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\tables\project\CRRMR_GYTicFirmaOlusturArg.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\tables\project\CRRMR_GYTicFirmaOlusturResult.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\tables\project\CRRMR_GYTicBolge.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\tables\project\CRRMR_GYTicGorev.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\tables\project\CRRMR_GYTicGorevIDAtaArg.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\tables\project\CRRMR_GYTicGorevIDAtaResult.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\tables\project\CRRMR_GYTicGorevOlusturArg.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\tables\project\CRRMR_GYTicGorevOlusturResult.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\tables\project\CRRMR_GYTicHakedis.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\tables\project\CRRMR_GYTicHizmet.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\tables\project\CRRMR_GYTicHizmetKategori.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\tables\project\CRRMR_GYTicHizmetleriEslestirArg.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\tables\project\CRRMR_GYTicHizmetleriEslestirResult.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\tables\project\CRRMR_GYTicHizmetTur.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\tables\project\CRRMR_GYTicKategori.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\unused\request\CRRM_GYTicFaturaBilgiVerRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\unused\request\CRRM_GYTicGiderGruplariVerRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\unused\request\CRRM_GYTicGiderMasrafVerRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\unused\response\CRRM_GYTicFaturaBilgiVerResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\unused\response\CRRM_GYTicGiderGruplariVerResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\unused\response\CRRM_GYTicGiderMasrafVerResponse.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\unused\tables\project\CRRMR_GYTicFaturaBilgi.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\unused\tables\project\CRRMR_GYTicFirmaGiderMasraf.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\unused\tables\project\CRRMR_GYTicGiderGrup.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\unused\tables\project\CRRMR_GYTicGrupFatura.cs" />
+    <Compile Include="src\rrm\structs\request\CRRMIslemListesiRequest.cs" />
+    <Compile Include="src\rrm\structs\request\CRRMKayitDegistiKontroluRequest.cs" />
+    <Compile Include="src\rrm\structs\request\CRRMLoginRequest.cs" />
+    <Compile Include="src\rrm\structs\request\CRRMLogoutRequest.cs" />
+    <Compile Include="src\rrm\structs\request\CRRMPingRequest.cs" />
+    <Compile Include="src\rrm\structs\request\CRRMProgramVersionRequest.cs" />
+    <Compile Include="src\rrm\structs\request\CRRMSessionInfoRequest.cs" />
+    <Compile Include="src\rrm\structs\request\CRRMTest01Request.cs" />
+    <Compile Include="src\rrm\structs\request\CRRMWSBilgiRequest.cs" />
+    <Compile Include="src\rrm\structs\request\CRRM_FRRaporBilgilerRequest.cs" />
+    <Compile Include="src\rrm\structs\request\CRRM_FRRaporGetStreamRequest.cs" />
+    <Compile Include="src\rrm\structs\request\CRRM_FRRaporOlusturRequest.cs" />
+    <Compile Include="src\rrm\structs\response\CRRMBasicSessionInfoResponse.cs" />
+    <Compile Include="src\rrm\structs\response\CRRMIslemListesiResponse.cs" />
+    <Compile Include="src\rrm\structs\response\CRRMKayitDegistiKontroluResponse.cs" />
+    <Compile Include="src\rrm\structs\response\CRRMLoginResponse.cs" />
+    <Compile Include="src\rrm\structs\response\CRRMLogoutResponse.cs" />
+    <Compile Include="src\rrm\structs\response\CRRMPingResponse.cs" />
+    <Compile Include="src\rrm\structs\response\CRRMProgramVersionResponse.cs" />
+    <Compile Include="src\rrm\structs\response\CRRMSessionInfoResponse.cs" />
+    <Compile Include="src\rrm\structs\response\CRRMTest01Response.cs" />
+    <Compile Include="src\rrm\structs\response\CRRMWSBilgiResponse.cs" />
+    <Compile Include="src\rrm\structs\response\CRRM_FRRaporBilgilerResponse.cs" />
+    <Compile Include="src\rrm\structs\response\CRRM_FRRaporOlusturResponse.cs" />
+    <Compile Include="src\rrm\tables\baseTemplates\CRRMRequestRecord.cs" />
+    <Compile Include="src\rrm\tables\baseTemplates\CRRMRequestRecordList.cs" />
+    <Compile Include="src\rrm\tables\baseTemplates\CRRMResponseRecord.cs" />
+    <Compile Include="src\rrm\tables\baseTemplates\CRRMR_KodNoVeAdiYapi.cs" />
+    <Compile Include="src\rrm\tables\baseTemplates\CRRMR_KodNoYapi.cs" />
+    <Compile Include="src\rrm\tables\baseTemplates\CRRMR_KodVeAdiYapi.cs" />
+    <Compile Include="src\rrm\tables\baseTemplates\CRRMR_KodYapi.cs" />
+    <Compile Include="src\rrm\tables\baseTemplates\CRRMR_SayacVeAdiYapi.cs" />
+    <Compile Include="src\rrm\tables\baseTemplates\CRRMR_SayacYapi.cs" />
+    <Compile Include="src\rrm\tables\base\CRRMRecord.cs" />
+    <Compile Include="src\rrm\tables\base\CRRMRecordBase.cs" />
+    <Compile Include="src\rrm\tables\base\CRRMRecordList.cs" />
+    <Compile Include="src\rrm\tables\enum\CRRMR_FRSecimTipi.cs" />
+    <Compile Include="src\rrm\tables\project\CRRMR_Cari.cs" />
+    <Compile Include="src\rrm\tables\project\CRRMR_FRSecimBilgi.cs" />
+    <Compile Include="src\rrm\tables\project\CRRMR_Il.cs" />
+    <Compile Include="src\rrm\tables\project\CRRMR_Islem.cs" />
+    <Compile Include="src\rrm\tables\project\CRRMR_KayitDegistiKontrolu.cs" />
+    <Compile Include="src\rrm\tables\project\CRRMR_Plasiyer.cs" />
+    <Compile Include="src\rrm\tables\project\CRRMR_Stok.cs" />
+    <Compile Include="src\rrm\tables\project\CRRMR_Sube.cs" />
+    <Compile Include="src\rrm\tables\project\CRRMR_TahsilSekli.cs" />
+    <Compile Include="src\wscomm\api\CWSComm.cs" />
+    <Compile Include="viows.asmx.cs">
+      <SubType>Component</SubType>
+      <DependentUpon>viows.asmx</DependentUpon>
+    </Compile>
+    <Compile Include="viows_guleryuz_personel.asmx.cs">
+      <SubType>Component</SubType>
+      <DependentUpon>viows_guleryuz_personel.asmx</DependentUpon>
+    </Compile>
+    <Compile Include="viows_guleryuz_ticari.asmx.cs">
+      <SubType>Component</SubType>
+      <DependentUpon>viows_guleryuz_ticari.asmx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>20391</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44354/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\ozer\CSkyWSApp\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\ozer\CSkyWSApp\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

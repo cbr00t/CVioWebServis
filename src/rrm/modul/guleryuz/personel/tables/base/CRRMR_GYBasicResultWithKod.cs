@@ -9,8 +9,7 @@ namespace CVioWebServis {
     [Serializable()]
     public class CRRMR_GYBasicResultWithKod : CRRMR_GYBasicResult {
         #region Accessors
-        [XmlElement( "kod" )]
-        public string Kod { get; set; }
+        [XmlElement("kod")] public string Kod { get; set; }
         #endregion
     }
 }

@@ -8,9 +8,6 @@ using System.Text;
 namespace CVioWebServis {
     [Serializable()]
     public class CRRMR_GYBasicResultWithID : CRRMR_GYBasicResult {
-        #region Accessors
-        [XmlElement( "id" )]
-        public Guid? ID { get; set; }
-        #endregion
+        [XmlElement("id")] public Guid? ID { get; set; }
     }
 }

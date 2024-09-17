@@ -9,6 +9,5 @@ using System.Data;
 using System.Xml.Serialization;
 
 namespace CVioWebServis {
-    [Serializable()]
-    public class CRRM_GYTicBolgeleriVerResponse : CRRMMasterResponse<CRRMR_GYTicBolge> { }
+    [Serializable()] public class CRRM_GYTicBolgeleriVerResponse : CRRMMasterResponse<CRRMR_GYTicBolge> { }
 }

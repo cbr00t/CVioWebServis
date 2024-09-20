@@ -9,7 +9,7 @@ namespace CVioWebServis {
     [Serializable()]
     public class CRRMR_GYBasicArgWithID : CRRMRequestRecord {
         #region Accessors
-        [XmlElement( "id" )] public Guid ID { get; set; }
+        [XmlElement("id")] public Guid ID { get; set; }
         #endregion
     }
 }

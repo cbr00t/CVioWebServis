@@ -3,12 +3,12 @@ using System.Xml;
 using System.Xml.Serialization;
 
 namespace CVioWebServis {
-	public class CRRM_GYTicHizmetHakedisVeMaliyetRequest : CRRMMasterRequestNonFilterable<CRRMR_GYTicHizmetHakedisVeMaliyet> {
+	public class CRRM_GYTicHizmetHakedisVeMaliyetRequest : CRRMMasterListRequest<CRRMR_GYTicHizmetHakedisVeMaliyetArg, CRRMR_GYTicHizmetHakedisVeMaliyetResult> {
         public override string DefaultWSIslem { get => "ticHizmetHakedisVeMaliyet"; }
         public override Type ResponseClass { get => typeof(CRRM_GYTicHizmetHakedisVeMaliyetResponse); }
     }
-    [Serializable()] public class CRRM_GYTicHizmetHakedisVeMaliyetResponse : CRRMMasterResponse<CRRMR_GYTicHizmetHakedisVeMaliyet> { }
-	[Serializable()] public class CRRMR_GYTicHizmetHakedisVeMaliyet : CRRMR_GYBasicResult {
+    [Serializable()] public class CRRM_GYTicHizmetHakedisVeMaliyetResponse : CRRMMasterResponse<CRRMR_GYTicHizmetHakedisVeMaliyetResult> { }
+	[Serializable()] public class CRRMR_GYTicHizmetHakedisVeMaliyetArg : CRRMRequestRecord {
 		#region Accessors
 		[XmlElement("Tarih")] public DateTime Tarih { get; set; }
 		[XmlElement("FisNox")] public string FisNox { get; set; }
@@ -38,6 +38,8 @@ namespace CVioWebServis {
 		[XmlElement("EkMaliyet")] public decimal EkMaliyet { get; set; }
 		#endregion
 	}
+	[Serializable()] public class CRRMR_GYTicHizmetHakedisVeMaliyetResult : CRRMR_GYBasicResult { }
+	#region Ek Sınıflar
 	[Serializable()] public class CRRMR_GYTicHizmetHakedisVeMaliyet_Hizmet : CRRMRecord {
 		#region Accessors
 		[XmlElement("Yemek")] public decimal Yemek { get; set; }
@@ -57,4 +59,5 @@ namespace CVioWebServis {
 		[XmlElement("Bedel")] public decimal Bedel { get; set; }
 		#endregion
 	}
+	#endregion
 }

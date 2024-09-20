@@ -10,9 +10,7 @@ using System.ComponentModel;
 
 namespace CVioWebServis {
     public class CRRM_GYTicBolgeOlusturRequest : CRRMMasterListRequest<CRRMR_GYTicBolgeOlusturArg, CRRMR_GYTicBolgeOlusturResult> {
-        #region Getter
-        public override string DefaultWSIslem { get { return "ticBolgeOlustur"; } }
-        public override Type ResponseClass { get { return typeof(CRRM_GYTicBolgeOlusturResponse); } }
-        #endregion
+        public override string DefaultWSIslem { get => "ticBolgeOlustur"; }
+        public override Type ResponseClass { get => typeof(CRRM_GYTicBolgeOlusturResponse); }
     }
 }

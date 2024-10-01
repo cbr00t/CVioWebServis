@@ -22,7 +22,7 @@ namespace CVioWebServis {
 		[XmlElement("fazlaMesai50"), DefaultValue(typeof(decimal), "0")] public decimal FazlaMesai50 { get; set; }
         [XmlElement("fazlaMesai100"), DefaultValue(typeof(decimal), "0")] public decimal FazlaMesai100 { get; set; }
         [XmlElement("fazlaMesai150"), DefaultValue(typeof(decimal), "0")] public decimal FazlaMesai150 { get; set; }
-        [XmlElement("fazlaMesaiTumMaliyet"), DefaultValue(typeof(decimal), "0")] public decimal FazlaMesaiMaliyet { get; set; }
+        [XmlElement("fazlaMesaiTumMaliyet"), DefaultValue(typeof(decimal), "0")] public decimal FazlaMesaiTumMaliyet { get; set; }
 		[XmlElement("fazlaMesaiNormalMaliyet"), DefaultValue(typeof(decimal), "0")] public decimal FazlaMesaiMaliyetNormal { get; set; }
 		[XmlElement("fazlaMesai50Maliyet"), DefaultValue(typeof(decimal), "0")] public decimal FazlaMesai50Maliyet { get; set; }
         [XmlElement("fazlaMesai100Maliyet"), DefaultValue(typeof(decimal), "0")] public decimal FazlaMesai100Maliyet { get; set; }

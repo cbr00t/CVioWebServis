@@ -40,6 +40,7 @@ namespace CVioWebServis {
 		[XmlElement("HizmetFM")] public decimal HizmetFM { get; set; }
 		[XmlElement("Yol")] public decimal Yol { get; set; }
 		[XmlElement("Su")] public decimal Su { get; set; }
+		[XmlElement("Servis")] public decimal Servis { get; set; }
 		[XmlElement("DigerUcret")] public decimal DigerUcret { get; set; }
 		[XmlArray("EkHizmetler"), XmlArrayItem("EkHizmet")] public CRRMR_GYTicHizmetHakedisVeMaliyet_EkHizmet[] EkHizmetler { get; set; }
 		[XmlElement("EkMaliyet")] public decimal EkMaliyet { get; set; }

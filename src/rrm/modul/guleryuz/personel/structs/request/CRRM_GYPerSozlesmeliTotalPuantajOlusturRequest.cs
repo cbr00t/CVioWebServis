@@ -10,14 +10,7 @@ using System.ComponentModel;
 
 namespace CVioWebServis {
     public class CRRM_GYPerSozlesmeliTotalPuantajOlusturRequest : CRRMMasterListRequest<CRRMR_GYPerSozlesmeliTotalPuantajOlusturArg, CRRMR_GYPerSozlesmeliTotalPuantajOlusturResult> {
-        #region Getter
-        public override string DefaultWSIslem {
-            get { return "perSozlesmeliTotalPuantajOlustur"; }
-        }
-
-        public override Type ResponseClass {
-            get { return typeof( CRRM_GYPerSozlesmeliTotalPuantajOlusturResponse ); }
-        }
-        #endregion
+        public override string DefaultWSIslem { get => "perSozlesmeliTotalPuantajOlustur"; }
+        public override Type ResponseClass { get => typeof(CRRM_GYPerSozlesmeliTotalPuantajOlusturResponse); }
     }
 }

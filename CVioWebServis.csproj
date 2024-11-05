@@ -307,10 +307,6 @@
     <Compile Include="src\rrm\modul\guleryuz\personel\structs\tables\project\CRRMR_GYPerSozlesmeliPuantajSilResult.cs" />
     <Compile Include="src\rrm\modul\guleryuz\personel\structs\tables\project\CRRMR_GYPerSozlesmeliTotalPuantajOlusturArg.cs" />
     <Compile Include="src\rrm\modul\guleryuz\personel\structs\tables\project\CRRMR_GYPerSozlesmeliTotalPuantajOlusturResult.cs" />
-    <Compile Include="src\rrm\modul\guleryuz\personel\structs\tables\project\CRRMR_GYPerSP_Gun.cs" />
-    <Compile Include="src\rrm\modul\guleryuz\personel\structs\tables\project\CRRMR_GYPerSP_Kesinti.cs" />
-    <Compile Include="src\rrm\modul\guleryuz\personel\structs\tables\project\CRRMR_GYPerSP_YanOdeme.cs" />
-    <Compile Include="src\rrm\modul\guleryuz\personel\structs\tables\project\CRRMR_GYPerSTP_OdemeVerileri.cs" />
     <Compile Include="src\rrm\modul\guleryuz\personel\structs\tables\project\CRRMR_GYPerTarCalismaOlusturArg.cs" />
     <Compile Include="src\rrm\modul\guleryuz\personel\structs\tables\project\CRRMR_GYPerTarCalismaOlusturResult.cs" />
     <Compile Include="src\rrm\modul\guleryuz\personel\structs\tables\project\CRRMR_GYPerTarCalismaSilArg.cs" />

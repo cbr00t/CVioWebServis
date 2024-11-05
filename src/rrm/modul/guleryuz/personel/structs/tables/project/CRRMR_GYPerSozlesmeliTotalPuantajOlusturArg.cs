@@ -30,6 +30,6 @@ namespace CVioWebServis {
 	[Serializable()]
 	public class CRRMR_GYPer_EksikBilgi : CRRMRecord {
 		[XmlElement("nedenKod")] public string NedenKod { get; set; }
-		[XmlElement("gun"), DefaultValue(0)] public decimal Gun { get; set; }
+		[XmlElement("gun"), DefaultValue(0)] public int Gun { get; set; }
 	}
 }

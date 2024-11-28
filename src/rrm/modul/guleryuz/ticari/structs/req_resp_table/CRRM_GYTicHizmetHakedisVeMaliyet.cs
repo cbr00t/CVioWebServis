@@ -30,7 +30,7 @@ namespace CVioWebServis {
 		[XmlElement("netmi")] public string netmi { get; set; }
 		public bool Netmi { get => netmi.bosDegilmi(); set => netmi = value ? "*" : ""; }
 		[XmlElement("XOdenen")] public decimal XOdenen { get; set; }
-		[XmlElement("SGKVeVergi")] public decimal SGKVeVergi { get; set; }
+		/*[XmlElement("SGKVeVergi")] public decimal SGKVeVergi { get; set; }
 		[XmlElement("FazlaMesai")] public decimal FazlaMesai { get; set; }
 		[XmlElement("HizmetFazlaMesai")] public decimal HizmetFazlaMesai { get; set; }
 		[XmlElement("Yemek")] public decimal Yemek { get; set; }
@@ -39,11 +39,12 @@ namespace CVioWebServis {
 		[XmlElement("Hizmet")] public decimal Hizmet { get; set; }
 		[XmlElement("HizmetFM")] public decimal HizmetFM { get; set; }
 		[XmlElement("Yol")] public decimal Yol { get; set; }
-		[XmlElement("Su")] public decimal Su { get; set; }
-		[XmlElement("Servis")] public decimal Servis { get; set; }
-		[XmlElement("DigerUcret")] public decimal DigerUcret { get; set; }
+		[XmlElement("Su")] public decimal Su { get; set; }*/
+		[XmlElement("SuAdet")] public int SuAdet { get; set; }
+		/*[XmlElement("Servis")] public decimal Servis { get; set; }
+		[XmlElement("DigerUcret")] public decimal DigerUcret { get; set; }*/
 		[XmlArray("EkHizmetler"), XmlArrayItem("EkHizmet")] public CRRMR_GYTicHizmetHakedisVeMaliyet_EkHizmet[] EkHizmetler { get; set; }
-		[XmlElement("EkMaliyet")] public decimal EkMaliyet { get; set; }
+		/*[XmlElement("EkMaliyet")] public decimal EkMaliyet { get; set; }*/
 		#endregion
 	}
 	[Serializable()] public class CRRMR_GYTicHizmetHakedisVeMaliyetResult : CRRMR_GYBasicResult { }

@@ -14,8 +14,9 @@ namespace CVioWebServis {
         [XmlElement("goPerID")] public Guid PerID { get; set; }
         [XmlElement("perIsim")] public string PerIsim { get; set; }
         [XmlElement("tckimlikno")] public string TCKimlikNo { get; set; }
-        /*[XmlElement( "hamUcret" ), DefaultValue( typeof( decimal ), "0" )] public decimal HamUcret { get; set; }*/
-        [XmlElement("brutOdenen"), DefaultValue(typeof(decimal), "0")] public decimal BrutOdenen { get; set; }
+		/*[XmlElement( "hamUcret" ), DefaultValue( typeof( decimal ), "0" )] public decimal HamUcret { get; set; }*/
+		[XmlElement("brutUcret"), DefaultValue(typeof(decimal), "0")] public decimal BrutUcret { get; set; }
+		[XmlElement("brutOdenen"), DefaultValue(typeof(decimal), "0")] public decimal BrutOdenen { get; set; }
         [XmlElement("normalOdeme"), DefaultValue(typeof(decimal), "0")] public decimal NormalOdeme { get; set; }
         [XmlElement("fazlaMesai"), DefaultValue(typeof(decimal), "0")] public decimal FazlaMesai { get; set; }
 		[XmlElement("fazlaMesaiNormal"), DefaultValue(typeof(decimal), "0")] public decimal FazlaMesaiNormal { get; set; }

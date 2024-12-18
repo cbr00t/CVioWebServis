@@ -18,10 +18,8 @@ namespace CVioWebServis {
         #endregion
 
         public override void updateRequestArgs(CRRMCallArgs args) {
-            base.updateRequestArgs(args); var qsArgs = args.QSArgs;
-            qsArgs.bosDegilseAtPut("donemID", DonemID);
-            if (YilAy.bosmu()) { qsArgs.bosDegilseAtPut("yil", Yil); qsArgs.bosDegilseAtPut("ay", Ay); }
-            else { qsArgs.bosDegilseAtPut("yilAy", YilAy); }
+            base.updateRequestArgs(args); var qsArgs = args.QSArgs; qsArgs.bosDegilseAtPut("donemID", DonemID);
+            if (YilAy.bosmu()) { qsArgs.bosDegilseAtPut("yil", Yil); qsArgs.bosDegilseAtPut("ay", Ay); } else { qsArgs.bosDegilseAtPut("yilAy", YilAy); }
         }
     }
 }

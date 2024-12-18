@@ -10,109 +10,33 @@ namespace CVioWebServis {
     [Serializable()]
     public class CRRMR_GYPerTarFirmaMaliyet : CRRMResponseRecord {
         #region Accessors
-        /*[XmlElement( "tahakkukTarihi" ), DefaultValue( null )]
-        public DateTime TahakkukTarihi { get; set; }*/
-
-        [XmlElement( "goPerID" )]
-        public Guid PerID { get; set; }
-
-        /*[XmlElement( "goPerKod" )]
-        public string PerKod { get; set; }*/
-
-        [XmlElement( "perIsim" )]
-        public string PerIsim { get; set; }
-
-        [XmlElement( "tckimlikno" )]
-        public string TCKimlikNo { get; set; }
-
-        [XmlElement( "goDonemID" )]
-        public Guid DonemID { get; set; }
-
-        /*[XmlElement( "goDonemSayac" ), DefaultValue( 0 )]
-        public int DonemSayac { get; set; }
-
-        [XmlElement( "goDonemYilAy" ), DefaultValue( 0 )]
-        public int DonemYilAy { get; set; }
-
-        [XmlElement( "goOdemeNo" )]
-        public string DonemOdemeNo { get; set; }*/
-
-        [XmlElement( "goFirmaID" )]
-        public Guid FirmaID { get; set; }
-
-        [XmlElement( "goFirmaAdi" )]
-        public string FirmaAdi { get; set; }
-
-        [XmlElement( "goBolgeID" )]
-        public Guid BolgeID { get; set; }
-
-        [XmlElement( "goBolgeAdi" )]
-        public string BolgeAdi { get; set; }
-
-        /*[XmlElement( "goCalismaAlanID" )]
-        public Guid CalismaAlanID { get; set; }
-
-        [XmlElement( "goCalismaAlanAdi" )]
-        public string CalismaAlanAdi { get; set; }*/
-
-        /*[XmlElement( "hamUcret" ), DefaultValue( typeof( decimal ), "0" )]
-        public decimal HamUcret { get; set; }*/
-
-        [XmlElement( "brutOdenen" ), DefaultValue( typeof( decimal ), "0" )]
-        public decimal BrutOdenen { get; set; }
-
-        [XmlElement( "normalOdeme" ), DefaultValue( typeof( decimal ), "0" )]
-        public decimal NormalOdeme { get; set; }
-
-        [XmlElement( "fazlaMesai" ), DefaultValue( typeof( decimal ), "0" )]
-        public decimal FazlaMesai { get; set; }
-
-        [XmlElement( "fazlaMesaiSaat" ), DefaultValue( typeof( decimal ), "0" )]
-        public decimal FazlaMesaiSaat { get; set; }
-
-        [XmlElement( "calismaGunu" ), DefaultValue( typeof( decimal ), "0" )]
-        public decimal CalismaGunu { get; set; }
-
-        [XmlElement( "yanOdeme" ), DefaultValue( typeof( decimal ), "0" )]
-        public decimal YanOdeme { get; set; }
-
-        [XmlElement( "ozelKesinti" ), DefaultValue( typeof( decimal ), "0" )]
-        public decimal OzelKesinti { get; set; }
-
-        [XmlElement( "isverenPrimi" ), DefaultValue( typeof( decimal ), "0" )]
-        public decimal IsverenPrimi { get; set; }
-        
-        [XmlElement( "issizlikIsvPrimi" ), DefaultValue( typeof( decimal ), "0" )]
-        public decimal IssizlikIsvPrimi { get; set; }
-
-        [XmlElement( "besKesinti" ), DefaultValue( typeof( decimal ), "0" )]
-        public decimal BESKesinti { get; set; }
-
-        [XmlElement( "icraKesinti" ), DefaultValue( typeof( decimal ), "0" )]
-        public decimal IcraKesinti { get; set; }
-
-        [XmlElement( "nafakaKesinti" ), DefaultValue( typeof( decimal ), "0" )]
-        public decimal NafakaKesinti { get; set; }
-
-        [XmlElement( "netHakedis" ), DefaultValue( typeof( decimal ), "0" )]
-        public decimal NetHakedis { get; set; }
-
-        [XmlElement( "asgariGecim" ), DefaultValue( typeof( decimal ), "0" )]
-        public decimal AsgariGecim { get; set; }
-
-        [XmlElement( "sgk_sskMatrahi" ), DefaultValue( typeof( decimal ), "0" )]
-        public decimal SGK_SSKMatrahi { get; set; }
-
-        [XmlElement( "sgk_Indirim5Puan" ), DefaultValue( typeof( decimal ), "0" )]
-        public decimal SGK_Indirim5Puan { get; set; }
-
-        [XmlElement( "sgkTesvikKanunNo" )]
-        public string SGKTesvikKanunNo { get; set; }
-
-        [XmlElement( "sskDurum" )]
-        [SoapIgnore()]
-        public string SSKDurumKod { get; set; }
-
+        [XmlElement("goPerID")] public Guid PerID { get; set; }
+        [XmlElement("perIsim")] public string PerIsim { get; set; }
+        [XmlElement("tckimlikno")] public string TCKimlikNo { get; set; }
+        [XmlElement("goDonemID")] public Guid DonemID { get; set; }
+        [XmlElement("goFirmaID")] public Guid FirmaID { get; set; }
+        [XmlElement("goFirmaAdi")] public string FirmaAdi { get; set; }
+        [XmlElement("goBolgeID")] public Guid BolgeID { get; set; }
+        [XmlElement("goBolgeAdi")] public string BolgeAdi { get; set; }
+		[XmlElement("brutUcret"), DefaultValue(typeof(decimal), "0")] public decimal BrutUcret { get; set; }
+		[XmlElement("brutOdenen"), DefaultValue(typeof(decimal), "0")] public decimal BrutOdenen { get; set; }
+        [XmlElement("normalOdeme"), DefaultValue(typeof(decimal), "0")] public decimal NormalOdeme { get; set; }
+        [XmlElement("fazlaMesai"), DefaultValue(typeof(decimal), "0")] public decimal FazlaMesai { get; set; }
+        [XmlElement("fazlaMesaiSaat"), DefaultValue(typeof(decimal), "0")] public decimal FazlaMesaiSaat { get; set; }
+        [XmlElement("calismaGunu"), DefaultValue(typeof(decimal), "0")] public decimal CalismaGunu { get; set; }
+        [XmlElement("yanOdeme"), DefaultValue(typeof(decimal), "0")] public decimal YanOdeme { get; set; }
+        [XmlElement("ozelKesinti"), DefaultValue(typeof(decimal), "0")] public decimal OzelKesinti { get; set; }
+        [XmlElement("isverenPrimi"), DefaultValue(typeof(decimal), "0")] public decimal IsverenPrimi { get; set; }
+        [XmlElement("issizlikIsvPrimi"), DefaultValue(typeof(decimal), "0")] public decimal IssizlikIsvPrimi { get; set; }
+        [XmlElement("besKesinti"), DefaultValue(typeof(decimal), "0")] public decimal BESKesinti { get; set; }
+        [XmlElement("icraKesinti"), DefaultValue(typeof(decimal), "0")] public decimal IcraKesinti { get; set; }
+        [XmlElement("nafakaKesinti"), DefaultValue(typeof(decimal), "0")] public decimal NafakaKesinti { get; set; }
+        [XmlElement("netHakedis"), DefaultValue(typeof(decimal), "0")] public decimal NetHakedis { get; set; }
+        [XmlElement("asgariGecim"), DefaultValue(typeof(decimal), "0")] public decimal AsgariGecim { get; set; }
+        [XmlElement("sgk_sskMatrahi"), DefaultValue(typeof(decimal), "0")] public decimal SGK_SSKMatrahi { get; set; }
+        [XmlElement("sgk_Indirim5Puan"), DefaultValue(typeof(decimal), "0")] public decimal SGK_Indirim5Puan { get; set; }
+        [XmlElement("sgkTesvikKanunNo")] public string SGKTesvikKanunNo { get; set; }
+        [XmlElement("sskDurum"), SoapIgnore()] public string SSKDurumKod { get; set; }
         public CRRM_SSKDurum SSKDurum {
             get {
                 if (SSKDurumKod != null) {
@@ -132,7 +56,6 @@ namespace CVioWebServis {
                         case "R": return CRRM_SSKDurum.Diger;
                     }
                 }
-
                 return CRRM_SSKDurum.Normal;
             }
             set {
@@ -154,12 +77,8 @@ namespace CVioWebServis {
                 }
             }
         }
-
-        [XmlElement( "agiDahilNet" ), DefaultValue( typeof( decimal ), "0" )]
-        public decimal AgiDahilNet { get; set; }
-
-        [XmlElement( "firmaMaliyet" ), DefaultValue( typeof( decimal ), "0" )]
-        public decimal FirmaMaliyet { get; set; }
+        [XmlElement("agiDahilNet"), DefaultValue(typeof(decimal), "0")] public decimal AgiDahilNet { get; set; }
+        [XmlElement("firmaMaliyet"), DefaultValue(typeof(decimal), "0")] public decimal FirmaMaliyet { get; set; }
         #endregion
     }
 }

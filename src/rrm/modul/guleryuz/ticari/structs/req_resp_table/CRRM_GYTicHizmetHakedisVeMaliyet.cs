@@ -53,6 +53,7 @@ namespace CVioWebServis {
 		#region Accessors
 		[XmlElement("ID")] public Guid ID { get; set; }
 		[XmlElement("Aciklama")] public string Aciklama { get; set; }
+		[XmlElement("Miktar")] public decimal Miktar { get; set; }
 		[XmlElement("Bedel")] public decimal Bedel { get; set; }
 		#endregion
 	}

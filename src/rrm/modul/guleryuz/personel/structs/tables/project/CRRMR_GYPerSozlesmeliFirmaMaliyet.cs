@@ -94,6 +94,7 @@ namespace CVioWebServis {
         }
         [XmlElement("agiDahilNet"), DefaultValue(typeof(decimal), "0")] public decimal AgiDahilNet { get; set; }
         [XmlElement("firmaMaliyet"), DefaultValue(typeof(decimal), "0")] public decimal FirmaMaliyet { get; set; }
-        #endregion
-    }
+        [XmlElement("kidemIhbarYuku"), DefaultValue(typeof(decimal), "0")] public decimal KidemIhbarYuku { get; set; }
+		#endregion
+	}
 }

@@ -346,6 +346,7 @@
     <Compile Include="src\rrm\modul\guleryuz\ticari\structs\request\CRRM_GYTicHizmetTurleriVerRequest.cs" />
     <Compile Include="src\rrm\modul\guleryuz\ticari\structs\request\CRRM_GYTicKategorileriVerRequest.cs" />
     <Compile Include="src\rrm\modul\guleryuz\ticari\structs\request\CRRM_GYTicSozlesmeliHakedisGonderRequest.cs" />
+    <Compile Include="src\rrm\modul\guleryuz\ticari\structs\req_resp_table\CRRM_GYTicFaturaHizmet.cs" />
     <Compile Include="src\rrm\modul\guleryuz\ticari\structs\req_resp_table\CRRM_GYTicHizmetHakedisVeMaliyet.cs" />
     <Compile Include="src\rrm\modul\guleryuz\ticari\structs\response\CRRM_GYTicTakipNolariVerResponse.cs" />
     <Compile Include="src\rrm\modul\guleryuz\ticari\structs\response\CRRM_GYTicBolgeOlusturResponse.cs" />

@@ -57,7 +57,8 @@ namespace CVioWebServis.modul {
 		[WebMethod()] public CRRM_GYTicTakipNolariVerResponse ticTakipNolariVer(CRRM_GYTicTakipNolariVerRequest request) { return (CRRM_GYTicTakipNolariVerResponse)request.wsCall(wsComm); }
 		[WebMethod()] public CRRM_GYTicFaturaVeriOlusturResponse ticFaturaVeriOlustur(CRRM_GYTicFaturaVeriOlusturRequest request) { return (CRRM_GYTicFaturaVeriOlusturResponse)request.wsCall(wsComm); }
         [WebMethod()] public CRRM_GYTicHizmetleriEslestirResponse ticHizmetleriEslestir(CRRM_GYTicHizmetleriEslestirRequest request) { return (CRRM_GYTicHizmetleriEslestirResponse)request.wsCall(wsComm); }
-		[WebMethod()] public CRRM_GYTicHizmetHakedisVeMaliyetResponse ticHizmetHakedisVeMaliyet(CRRM_GYTicHizmetHakedisVeMaliyetRequest request) { return (CRRM_GYTicHizmetHakedisVeMaliyetResponse)request.wsCall(wsComm); }
+		[WebMethod()] public CRRM_GYTicHizmetHakedisVeMaliyetResponse ticHizmetHakedisVeMaliyet(CRRM_GYTicHizmetHakedisVeMaliyetRequest request) => (CRRM_GYTicHizmetHakedisVeMaliyetResponse)request.wsCall(wsComm);
+		[WebMethod()] public CRRM_GYTicFaturaHizmetResponse TicFaturaHizmet(CRRM_GYTicFaturaHizmetRequest request) => (CRRM_GYTicFaturaHizmetResponse)request.wsCall(wsComm);
 		#region -------------------------------------------- İPTAL OLANLAR --------------------------------------------
 		/*[WebMethod(), Obsolete("Bu API kullanımdan kaldırılmıştır", true)] public CRRM_GYTicFirmaIDAtaResponse ticFirmaIDAta( CRRM_GYTicFirmaIDAtaRequest request ) { return (CRRM_GYTicFirmaIDAtaResponse)request.wsCall( wsComm ); }
         [WebMethod(), Obsolete("Bu API kullanımdan kaldırılmıştır", true)] public CRRM_GYTicGorevIDAtaResponse ticGorevIDAta( CRRM_GYTicGorevIDAtaRequest request ) { return (CRRM_GYTicGorevIDAtaResponse)request.wsCall( wsComm ); }

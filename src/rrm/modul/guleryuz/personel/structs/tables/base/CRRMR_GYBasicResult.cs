@@ -7,10 +7,10 @@ using System.Text;
 
 namespace CVioWebServis {
     [Serializable()] public class CRRMR_GYBasicResult : CRRMResponseRecord {
-        #region Accessors
-        [XmlElement("isError")] public bool IsError { get; set; } [XmlElement("errorCode")] public string ErrorCode { get; set; }
-        [XmlElement("errorText")] public string ErrorText { get; set; } [XmlElement("uyariText")] public string UyariText { get; set; }
+        [XmlElement("isError")] public bool IsError { get; set; }
+        [XmlElement("errorCode")] public string ErrorCode { get; set; }
+        [XmlElement("errorText")] public string ErrorText { get; set; }
+        [XmlElement("uyariText")] public string UyariText { get; set; }
         public bool UyariVarmi { get => UyariText.bosDegilmi(); set { } }
-        #endregion
     }
 }

@@ -24,7 +24,6 @@ namespace CVioWebServis {
                         case "W": return CRRMErrorCategory.Webci;
                     }
                 }
-
                 return CRRMErrorCategory.Kullanici;
             }
             set {
@@ -37,14 +36,10 @@ namespace CVioWebServis {
         }
 
         public string Code { get; set; }
-
         public string SubCode { get; set; }
-
         public string ExtraArg { get; set; }
-
         public string Message { get; set; }
         #endregion
-
 
         #region Uygunluk
         [SoapIgnore()]
